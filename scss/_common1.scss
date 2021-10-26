@@ -1,6 +1,6 @@
 body {
   font-size: 15px;
-  font-family: 'Noto Serif', serif;
+  font-family: "Noto Serif", serif;
   line-height: 1.8;
   letter-spacing: 1px;
   word-break: break-all;
@@ -8,7 +8,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: #333;
+  color: $cBlack;
 }
 
 li {
@@ -31,11 +31,88 @@ li {
   font-size: 40px;
 
   small {
-  border-left: solid 8px #75a9ff;
-  padding-right: 10px;
-}
+    border-left: solid 8px #75a9ff;
+    padding-right: 10px;
+  }
 }
 
 .intro_txt {
   font-size: 18px;
+}
+
+// footer
+footer {
+  padding: 50px 0 20px;
+  background: $cBlack;
+  color: $bWhite;
+}
+
+.footer_logo {
+  width: 15%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.footer_list {
+  @include flex1;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.footer_item {
+  padding-right: 28px;
+  margin-right: 20px;
+  border-right: solid 3px $cBlue;
+  font-size: 18px;
+  line-height: 1;
+
+  a {
+    color: $bWhite;
+  }
+
+  a:hover {
+    color: $cBlue;
+  }
+}
+.footer_item:last-child {
+  padding-right: 0;
+  margin-right: 0;
+  border-right: none;
+}
+
+.footer_sns {
+  margin-bottom: 50px;
+  @include flex1;
+  justify-content: center;
+  align-items: center;
+
+
+  .sns_icon1 {
+    margin-right: 25px;
+  }
+
+  .sns_icon1,
+  .sns_icon2 {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+
+  .sns_icon1:hover,
+  .sns_icon2:hover {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+.footer_txt {
+  display: block;
+  text-align: center;
+  font-size: 15px;
 }
